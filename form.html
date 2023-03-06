@@ -27,7 +27,7 @@
 			<div class="row">
 				<div class="input-group">
 					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-					<input type="text" placeholder="Имя и фамилия" class="form-control" required>
+					<input type="text" placeholder="Имя и фамилия" class="form-control" onblur="console.log('Поле ввода имени обязательно.')" required>
 				</div>
 				
 				<div class="input-group">
@@ -41,7 +41,7 @@
 
 				</div>
 
-				<div class="btn btn-primary">Отправить</div>
+				<div class="btn btn-primary" onclick="console.log('Сообщение было отправлено.');">Отправить</div>
 
 			</div>
 		</div>

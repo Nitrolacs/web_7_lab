@@ -15,3 +15,19 @@ console.log('All images:')
 allImages.forEach((item, index) => {
 	console.log(`${index}: <img src=${item.src} alt=${item.alt}>`);
 })
+
+// Обработчики /как свойства
+document.links.history.ondblclick = function() {
+	console.log('Была два раза нажата кнопка перехода на историю электромобилей.');
+}
+
+document.links.tesla.onmouseover = function() {
+	console.log('Была наведена мышка на кнопку для перехода на сайт теслы.')
+}
+
+// Регистрация обработчиков
+let outLink = document.getElementById("out_link");
+outLink.addEventListener("mousedown", function(e) {console.log(e);}, false)
+
+let outImg = document.getElementById("out_img");
+outImg.addEventListener("mouseout", function(e) {console.log(e);}, false)
