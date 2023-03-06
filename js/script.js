@@ -1,20 +1,17 @@
-function sumElements(arr) {
-	let sum = 0;
-	for (index = 0; index < arr.length; ++index) {
-		sum += arr[index];
-	}
-	return sum;
-}
+// После загрузки страницы вывести в консоль информацию о всех
+// ссылках, якорях, изображениях на странице.
 
-function minElement(arr) {
-	// ... - оператор spread, расширяет массив на отдельные элементы.
-	return Math.min(...arr);
-}
+// И изображения, и ссылки
+let allLinks = Array.from(document.getElementsByTagName("a"));
 
-function prodElements(arr) {
-	let product = 1;
-	for (index = 0; index < arr.length; ++index) {
-		product *= arr[index];
-	}
-	return product;
-}
+let allImages = Array.from(document.getElementsByTagName("img"));
+
+console.log('All links and anchors:')
+allLinks.forEach((item, index) => {
+	console.log(`${index}: <a href=${item.href} target=${item.target}></a>`);
+})
+
+console.log('All images:')
+allImages.forEach((item, index) => {
+	console.log(`${index}: <img src=${item.src} alt=${item.alt}>`);
+})
